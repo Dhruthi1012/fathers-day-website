@@ -385,6 +385,51 @@ body{
         padding:25px;
     }
 }
+/* Premium Home Page */
+
+.hero-subtext{
+    margin-top:20px;
+    font-size:1.1rem;
+    color:#FFD700;
+}
+
+.home-menu{
+    padding:100px 0;
+}
+
+.menu-card-link{
+    text-decoration:none;
+}
+
+.menu-card{
+    background:#102845;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    height:100%;
+    transition:0.4s;
+    border:1px solid rgba(255,215,0,0.2);
+}
+
+.menu-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(255,215,0,0.2);
+}
+
+.menu-icon{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.menu-card h3{
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.menu-card p{
+    color:white;
+}
+
 
 
 

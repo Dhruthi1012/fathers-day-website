@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#081526;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Floating Hearts */
+
+.hearts-container{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+.heart{
+    position:absolute;
+    color:#FFD700;
+    font-size:20px;
+    animation:floatHeart 8s linear infinite;
+}
+
+@keyframes floatHeart{
+    0%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background:url('../images/dad.jpg');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    padding:20px;
+}
+
+.hero-title{
+    font-family:'Cinzel',serif;
+    font-size:4.5rem;
+    margin-bottom:20px;
+    text-shadow:2px 2px 15px rgba(0,0,0,0.8);
+}
+
+.hero-text{
+    font-size:1.3rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    background:#FFD700;
+    color:#000;
+    border:none;
+    padding:14px 35px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.hero-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(255,215,0,0.3);
+}
+
+/* Sections */
+
+.about-section,
+.gallery-section,
+.timeline-section,
+.letter-section,
+.surprise-section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+    color:#cccccc;
+}
+
+/* Cards */
+
+.about-card{
+    background:#102845;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    height:100%;
+    border:1px solid rgba(255,215,0,0.2);
+}
+
+.about-card:hover{
+    transform:translateY(-10px);
+}
+
+.card-icon{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.about-card h3{
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+/* Gallery */
+
+.gallery-img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.gallery-img:hover{
+    transform:scale(1.05);
+}
+
+/* Timeline */
+
+.timeline{
+    max-width:700px;
+    margin:auto;
+}
+
+.timeline-item{
+    background:#102845;
+    margin:20px 0;
+    padding:25px;
+    border-left:5px solid #FFD700;
+    border-radius:10px;
+    font-size:1.1rem;
+}
+
+/* Letter */
+
+.letter-box{
+    max-width:800px;
+    margin:auto;
+    background:#102845;
+    padding:40px;
+    border-radius:20px;
+    line-height:2;
+    text-align:left;
+}
+
+.letter-box h4{
+    margin-top:30px;
+    color:#FFD700;
+}
+
+/* Popup */
+
+#popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-content{
+    background:white;
+    color:black;
+    max-width:500px;
+    width:90%;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.popup-content h2{
+    margin-bottom:20px;
+}
+
+.popup-content p{
+    margin-bottom:15px;
+    line-height:1.8;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .hero-title{
+        font-size:2.7rem;
+    }
+
+    .hero-text{
+        font-size:1rem;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+
+    .gallery-img{
+        height:220px;
+    }
+
+    .letter-box{
+        padding:25px;
+    }
+}
